@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-   scale=1.0" name="viewport">
+    <title>PrivRank Result</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+        <h1>PrivRank Result</h1>
+        <table>
+            <h2> Recommending Item Number  |  Prediction Score </h2>
+            {% for result in res %}
+                <h2>
+                    <pre>{{result}}</pre>
+                </h2>
+            {% endfor %}
+        </table>
+</body>
+
+</html>

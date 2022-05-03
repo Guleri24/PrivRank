@@ -1,6 +1,7 @@
 anyio==3.5.0
 apturl==0.5.2
 asgiref==3.5.1
+autopep8==1.6.0
 blinker==1.4
 breezy==3.2.1
 Brlapi==0.8.3
@@ -25,6 +26,7 @@ fastapi==0.75.2
 fastbencode==0.0.5
 fastimport==0.9.14
 gpg===1.16.0-unknown
+gunicorn==20.1.0
 h11==0.13.0
 httplib2==0.20.2
 httptools==0.4.0
@@ -52,6 +54,7 @@ Pillow==9.0.1
 protobuf==3.12.4
 ptyprocess==0.7.0
 pycairo==1.20.1
+pycodestyle==2.8.0
 pycups==2.0.1
 pydantic==1.9.0
 PyGithub==1.55
@@ -79,6 +82,7 @@ six==1.16.0
 sniffio==1.2.0
 starlette==0.17.1
 systemd-python==234
+toml==0.10.2
 typing_extensions==4.2.0
 ubuntu-advantage-tools==27.7
 ubuntu-drivers-common==0.0.0
