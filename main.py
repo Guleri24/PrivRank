@@ -1,5 +1,5 @@
 import csv
-import re
+import random
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -23,6 +23,7 @@ async def recommended_users(request: Request,
     recommended_users_arr = [int(e) for e in recommended_users_arr]
 
     # add recommended users logic here
+    recommended_users_arr = obfuscation(recommended_users_arr, 10, 1000) # 1000 -> N; Also need to change in preprocess.py
     recommended_users_arr = predict(recommended_users_arr)
     res = ''
     for id, score in recommended_users_arr:
@@ -58,3 +59,14 @@ def get_similarity_matrix():
         for row in reader:
             matrix += [[float(e) for e in row]]   
         return matrix
+
+def obfuscation(arr, THRESHOLD, N):
+    THRESHOLD = int((THRESHOLD*N)/100)
+    THRESHOLD = min(THRESHOLD,N)
+    indexes = random.sample(range(0, N), THRESHOLD)
+    res = set()
+
+    for idx in set(indexes+arr):
+        if random.randint(0, 1):
+            res.add(idx)
+    return sorted(res)
