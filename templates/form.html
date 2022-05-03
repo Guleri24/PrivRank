@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-   scale=1.0" name="viewport">
     <title>PrivRank</title>
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
+
 <body>
-<main>
-    <h1>PrivRank</h1>
-    <form enctype="multipart/form-data" method="POST">
-        <div class="full-width">
-            <label for="liked_users">Liked Users Index:</label>
-            <input id="liked_users" name="liked_users" placeholder="1,2,3,45,67" required type="text">
-        </div>
-        <div class="full-width">
-            <button type="submit">Send Response</button>
-            <button type="reset">Clear Form</button>
-        </div>
-    </form>
-</main>
+    <main>
+        <h1>PrivRank</h1>
+        <form enctype="multipart/form-data" method="POST">
+            <div class="full-width">
+                <label for="liked_users">Liked Users Index:</label>
+                <input id="liked_users" name="liked_users" placeholder="1,2,3,45,67" required type="text">
+            </div>
+            <div class="full-width">
+                <button type="submit">Send Response</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+    </main>
 </body>
+
 </html>
